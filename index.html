@@ -17,6 +17,53 @@
     <link rel="stylesheet" href="css/plugin.css" >
     <link rel="stylesheet" href="css/style.css" >
     <link rel="stylesheet" href="css/responsive.css" >
+
+            <style>
+      /* Success message styling */
+      #successMsg {
+        display: none;
+        margin-top: 15px;
+        padding: 12px;
+        border-radius: 6px;
+        font-weight: 500;
+        background: #e6ffed;
+        color: #1d7a32;
+        border: 1px solid #a3e6b1;
+      }
+      #errorMsg {
+        display: none;
+        margin-top: 15px;
+        padding: 12px;
+        border-radius: 6px;
+        font-weight: 500;
+        background: #ffe6e6;
+        color: #a12d2d;
+        border: 1px solid #f5a3a3;
+      }
+
+      /* Loading spinner on button */
+      button.loading {
+        position: relative;
+        pointer-events: none;
+        opacity: 0.7;
+      }
+      button.loading::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        border: 2px solid #fff;
+        border-top: 2px solid transparent;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        100% { transform: translateY(-50%) rotate(360deg); }
+      }
+    </style>
     
   </head>
 
@@ -682,163 +729,124 @@ If you're looking for a reliable, fast-learning, and committed developer — let
         <!--================================
                 CONTACT 2 START
             =================================-->
-        <section id="contact" class="tf__contact_2 pt_95 xs_pt_45">
-          <div class="container">
-            <div class="row animation">
-              <div class="col-xl-4 col-md-6 col-lg-4">
-                <div
-                  class="tf__contact_2_text fade_left"
-                  data-trigerId="contact"
-                >
-                  <span>
-                    <img
-                      src="svg/voice_phone.svg"
-                      alt="contact"
-                      class="img-fluid w-100 svg">
-                  </span>
-                  <h3>Phone</h3>
-                  <p>
-                    +91 6305179296
-                  </p>
-                  <a href="callto:+919899462574">Call Me</a>
-                </div>
-              </div>
-              <div class="col-xl-4 col-md-6 col-lg-4">
-                <div
-                  class="tf__contact_2_text fade_left"
-                  data-trigerId="contact"
-                >
-                  <span>
-                    <img
-                      src="svg/map_issue.svg"
-                      alt="contact"
-                      class="img-fluid w-100 svg">
-                  </span>
-                  <h3>Location</h3>
-                  <p>
-                   Ongole, Andhra Pradesh , India
-                  </p>
-                  <a href="#"><br></a>
-                </div>
-              </div>
-              <div class="col-xl-4 col-md-6 col-lg-4">
-                <div
-                  class="tf__contact_2_text fade_left"
-                  data-trigerId="contact"
-                >
-                  <span>
-                    <img
-                      src="svg/send_mail.svg"
-                      alt="contact"
-                      class="img-fluid w-100 svg">
-                  </span>
-                  <h3>Monday - Sunday</h3>
-                  <p>
-                   arunkumartelidevulapalli1@gmail.com.com
-                  </p>
-                  <a href="mailto:anuj9665@gmail.com"
-                    >Send email</a
-                  >
-                </div>
+         <!-- CONTACT -->
+      <section id="contact" class="tf__contact_2 pt_95 xs_pt_45">
+        <div class="container">
+          <div class="row animation">
+            <div class="col-xl-4 col-md-6 col-lg-4">
+              <div class="tf__contact_2_text fade_left" data-trigerId="contact">
+                <span><img src="svg/voice_phone.svg" alt="contact" class="img-fluid w-100 svg"></span>
+                <h3>Phone</h3>
+                <p>+91 6305179296</p>
+                <a href="callto:+916305179296">Call Me</a>
               </div>
             </div>
-            <div class="contact_form_2">
-              <!-- <form>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <input type="text" placeholder="Your Name Here">
-                  </div>
-                  <div class="col-lg-6">
-                    <input type="text" placeholder="Subject" >
-                  </div>
-                  <div class="col-lg-12">
-                    <input type="email" placeholder="Email" >
-                  </div>
-                  <div class="col-12">
-                    <textarea
-                      rows="5"
-                      placeholder="Your Message Here"
-                    ></textarea>
-                  </div>
-                </div>
-                <button type="submit">Submit</button>
-              </form> -->
+            <div class="col-xl-4 col-md-6 col-lg-4">
+              <div class="tf__contact_2_text fade_left" data-trigerId="contact">
+                <span><img src="svg/map_issue.svg" alt="contact" class="img-fluid w-100 svg"></span>
+                <h3>Location</h3>
+                <p>Ongole, Andhra Pradesh , India</p>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 col-lg-4">
+              <div class="tf__contact_2_text fade_left" data-trigerId="contact">
+                <span><img src="svg/send_mail.svg" alt="contact" class="img-fluid w-100 svg"></span>
+                <h3>Email</h3>
+                <p>arunkumartelidevulapalli1@gmail.com</p>
+                <a href="mailto:arunkumartelidevulapalli1@gmail.com">Send email</a>
+              </div>
             </div>
           </div>
-        </section>
-        <!--================================
-                CONTACT 2 END
-            =================================-->
 
-        <!--================================
-                FOOTER 2 START
-            =================================-->
-        <div class="footer_2_copyright_area mt_120 xs_mt_80">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="tf__footer_copyright">
-                  <p>© Arun 2025 | All Rights Reserved</p>
-                  <!-- <ul>
-                    <li>
-                      <a href="#" class="text_hover_animaiton"
-                        >Linked </a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="text_hover_animaiton"
-                        >Privacy Policy</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="text_hover_animaiton">Sitemap</a>
-                    </li>
-                  </ul> -->
-                </div>
+          <div class="contact_form_2">
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Replace with your Access Key -->
+              <input type="hidden" name="access_key" value="01d9ba13-3cc2-4c4a-9ea8-1bccc8a17847">
+
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" required></textarea>
+
+              <!-- Honeypot -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+              <button type="submit">Submit</button>
+            </form>
+
+            <!-- Messages -->
+            <div id="successMsg"> Message sent successfully! ✅</div>
+            <div id="errorMsg">Something went wrong ❌. Please try again.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <div class="footer_2_copyright_area mt_120 xs_mt_80">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="tf__footer_copyright">
+                <p>© Arun 2025 | All Rights Reserved</p>
               </div>
             </div>
           </div>
         </div>
-        <!--================================
-                FOOTER 2 END
-            =================================-->
-
-        <!--================================
-                SCROLL BUTTON START
-            =================================-->
-        <div class="progress active">
-          <svg
-            class="progress-svg"
-            width="100%"
-            height="100%"
-            viewBox="-1 -1 102 102"
-          >
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
-          </svg>
-        </div>
-        <!--================================
-                SCROLL BUTTON END
-            =================================-->
-        <!--================================
-        CURSOR START
-    =================================-->
-        <div id="magic-cursor">
-          <div id="ball"></div>
-        </div>
-        <!--================================
-        CURSOR END
-    =================================-->
       </div>
+
+      <!-- SCROLL BUTTON -->
+      <div class="progress active">
+        <svg class="progress-svg" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+      </div>
+
+      <!-- CURSOR -->
+      <div id="magic-cursor"><div id="ball"></div></div>
     </div>
 
+    <!-- Scripts -->
     <script src="js/plugin.js"></script>
-    <!--scroll button js-->
     <script src="js/scroll_button.js"></script>
-    <!--sticky sidebar js-->
     <script src="js/sticky_sidebar.js"></script>
-    <!-- Gsap -->
     <script src="js/animation.js"></script>
-    <!--main/custom js-->
     <script src="js/main.js"></script>
+
+    <!-- Web3Forms AJAX handling -->
+    <script>
+      const form = document.getElementById("contactForm");
+      const successMsg = document.getElementById("successMsg");
+      const errorMsg = document.getElementById("errorMsg");
+      const submitBtn = form.querySelector("button");
+
+      form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        // Add loading state
+        submitBtn.classList.add("loading");
+        submitBtn.disabled = true;
+
+        let response = await fetch(form.action, {
+          method: form.method,
+          body: formData
+        });
+
+        // Remove loading state
+        submitBtn.classList.remove("loading");
+        submitBtn.disabled = false;
+
+        if (response.ok) {
+          successMsg.style.display = "block";
+          errorMsg.style.display = "none";
+          form.reset();
+          setTimeout(() => {
+            successMsg.style.display = "none";
+          }, 4000);
+        } else {
+          errorMsg.style.display = "block";
+          successMsg.style.display = "none";
+        }
+      });
+    </script>
   </body>
-</html> 
+</html>
